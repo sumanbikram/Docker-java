@@ -1,14 +1,15 @@
 pipeline {
   environment {
-    imagename = "yenigul/hacicenkins"
-    registryCredential = 'yenigul-dockerhub'
+    imagename = "GCR/java"
+    registryCredential = 'xxxx-NexusREGISTRY'
     dockerImage = ''
   }
   agent any
   stages {
     stage('Cloning Git') {
       steps {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sumanbikram/Docker-java.git']]])
+        git([url: 'https://github.com/SAMPLE-SBS-APP-.git', branch: 'master', credentialsId: 'Suman-github-user-token'])
+
 
       }
     }
@@ -19,7 +20,7 @@ pipeline {
         }
       }
     }
-    stage('Deploy Image') {
+    stage('Push Image') {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
