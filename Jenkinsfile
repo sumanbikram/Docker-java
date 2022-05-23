@@ -24,7 +24,7 @@ pipeline {
             }
         }
      }
-  stages {
+  
     stage('Cloning Git') {
       steps {
         git credentialsId: 'bef7a92a-8e0e-42f4-9159-04d4a9beb28c', url: 'https://github.com/sumanbikram/Docker-java.git'
