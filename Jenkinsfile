@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/sumanbikram/Docker-java.git', branch: 'master', credentialsId: 'ismailyenigul-github-user-token'])
+        git([url: 'https://github.com/sumanbikram/Docker-java.git', branch: 'master', credentialsId: '6c8877be-64a1-4a6f-a209-94401fb16f88'])
 
       }
     }
