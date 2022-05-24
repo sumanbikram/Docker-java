@@ -73,7 +73,7 @@
                                         <assembly>
                                             <descriptorRef>artifact</descriptorRef>
                                         </assembly>
-                                        <cmd>java -jar maven/${project.name}-${project.version}.jar</cmd>
+                                        <cmd>java -jar sbsapp.jar</cmd>
                                     </build>
                                     <run>
                                         <wait>
